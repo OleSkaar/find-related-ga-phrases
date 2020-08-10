@@ -35,24 +35,21 @@ class App extends React.Component {
   render() {
 
     const mainContentStyle = {
-      flexGrow: 2
-    }
-
-    const leftSidebarStyle = {
-      minWidth: '25%'
+      width: "40%",
+      display: 'flex',
+      alignSelf: 'center'
     }
 
     const rightSidebarStyle = {
-      minWidth: '25%',
-      visibility: this.state.relatedPhrases.length > 0 ? 'visible' : 'hidden',
-      flexGrow: 1
+      display: this.state.relatedPhrases.length > 0 ? 'flex' : 'none'
     }
 
     const flexboxContainer = {
       maxWidth: '100vw',
       display: 'flex',
-      alignItems: 'flex-start',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      flexDirection: 'row',
+      transition: "all 1s ease"
 
     }
 
@@ -75,7 +72,6 @@ class App extends React.Component {
           </p>
         </div>
         <div style={flexboxContainer}>
-          <div style={leftSidebarStyle}></div>
           <div style={mainContentStyle}>
           
             <Wordbox
@@ -85,7 +81,16 @@ class App extends React.Component {
               clickedPhraseId={this.state.clickedPhraseId}
               updateRelatedPhrases={(relatedPhrases, phraseId) => this.updateRelatedPhrases(relatedPhrases, phraseId)}
             />
-            <Parser
+           
+          </div>
+          <div style={rightSidebarStyle}>
+            <RelatedPhrasesWindow
+              relatedPhrases={this.state.relatedPhrases}
+            />
+          </div>
+        </div>
+        <div style={textBoxStyle}>
+          <Parser
               onDrop={this.handleOnDrop}
               onError={this.handleOnError}
               addRemoveButton
@@ -94,13 +99,7 @@ class App extends React.Component {
             >
               <span>Click to upload.</span>
             </Parser>
-          </div>
-          <div style={rightSidebarStyle}>
-            <RelatedPhrasesWindow
-              relatedPhrases={this.state.relatedPhrases}
-            />
-          </div>
-        </div>
+            </div>
       </div>
     );
   }
