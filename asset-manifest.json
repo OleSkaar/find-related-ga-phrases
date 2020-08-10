@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/find-related-ga-phrases/static/css/main.5f03bf0d.chunk.css",
+    "main.js": "/find-related-ga-phrases/static/js/main.befe1031.chunk.js",
+    "main.js.map": "/find-related-ga-phrases/static/js/main.befe1031.chunk.js.map",
+    "runtime-main.js": "/find-related-ga-phrases/static/js/runtime-main.6a400600.js",
+    "runtime-main.js.map": "/find-related-ga-phrases/static/js/runtime-main.6a400600.js.map",
+    "static/js/2.8d9b5403.chunk.js": "/find-related-ga-phrases/static/js/2.8d9b5403.chunk.js",
+    "static/js/2.8d9b5403.chunk.js.map": "/find-related-ga-phrases/static/js/2.8d9b5403.chunk.js.map",
+    "index.html": "/find-related-ga-phrases/index.html",
+    "precache-manifest.9bdb7ae464de057b52ad6c02fab53631.js": "/find-related-ga-phrases/precache-manifest.9bdb7ae464de057b52ad6c02fab53631.js",
+    "service-worker.js": "/find-related-ga-phrases/service-worker.js",
+    "static/css/main.5f03bf0d.chunk.css.map": "/find-related-ga-phrases/static/css/main.5f03bf0d.chunk.css.map",
+    "static/js/2.8d9b5403.chunk.js.LICENSE.txt": "/find-related-ga-phrases/static/js/2.8d9b5403.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a400600.js",
+    "static/js/2.8d9b5403.chunk.js",
+    "static/css/main.5f03bf0d.chunk.css",
+    "static/js/main.befe1031.chunk.js"
+  ]
+}
