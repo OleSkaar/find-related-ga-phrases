@@ -54,6 +54,11 @@ td {
   color: #61dafb;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

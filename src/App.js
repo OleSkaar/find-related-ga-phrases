@@ -34,22 +34,8 @@ class App extends React.Component {
   }
 
   render() {
-    const mainContentStyle = {
-      width: "40%",
-      display: "flex",
-      alignSelf: "center",
-    };
-
     const rightSidebarStyle = {
-      display: this.state.relatedPhrases.length > 0 ? "flex" : "none",
-    };
-
-    const flexboxContainer = {
-      maxWidth: "100vw",
-      display: "flex",
-      justifyContent: "center",
-      flexDirection: "row",
-      transition: "all 1s ease",
+      display: this.state.relatedPhrases.length > 0 ? "block" : "none",
     };
 
     const textBoxStyle = {
@@ -60,7 +46,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>🔍 Find related phrases</h1>
+          <h1 className="header-heading">🔍 Find related phrases</h1>
         </header>
         <div style={textBoxStyle}>
           <p>
@@ -83,8 +69,9 @@ class App extends React.Component {
             bag' will be marked as a related phrase to 'sleeping bag'.
           </p>
         </div>
-        <div style={flexboxContainer}>
-          <div style={mainContentStyle}>
+        <div class="grid-container">
+          <div class="grid-item"></div>
+          <div class="grid-item">
             <Wordbox
               isEmpty={this.state.isEmpty}
               words={this.state.wordContainer.words}
@@ -95,7 +82,7 @@ class App extends React.Component {
               }
             />
           </div>
-          <div style={rightSidebarStyle}>
+          <div class="grid-item" style={rightSidebarStyle}>
             <RelatedPhrasesWindow relatedPhrases={this.state.relatedPhrases} />
           </div>
         </div>
