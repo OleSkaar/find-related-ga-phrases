@@ -1,14 +1,14 @@
-import React from 'react'
-import WordData from './WordData.jsx'
+import React from "react";
+import WordData from "./WordData.jsx";
 
 function Wordbox(props) {
   const tableStyle = {
-    width: '100%',
-    margin: 'auto',
-    borderCollapse: 'collapse',
-    textAlign: 'left',
-    display: props.isEmpty ? 'none' : 'table'
-  }
+    width: "100%",
+    margin: "auto",
+    borderCollapse: "collapse",
+    textAlign: "left",
+    display: props.isEmpty ? "none" : "table",
+  };
 
   const tableRows = [];
   let rowIndex = 0;
@@ -23,23 +23,27 @@ function Wordbox(props) {
         clickedPhraseId={props.clickedPhraseId}
         updateRelatedPhrases={props.updateRelatedPhrases}
       />
-    )
-    rowIndex++
+    );
+    rowIndex++;
   }
-  
-  return (  
-      <table style={tableStyle}>
-        <thead>
-          <tr>
-            <th><h2>Search phrase</h2></th>
-            <th><h2>Unique searches</h2></th>
-            <th><h2>Related Phrases</h2></th>
-          </tr>
-        </thead>
-        <tbody>
-          {tableRows}
-        </tbody>
-      </table>
+
+  return (
+    <table style={tableStyle}>
+      <thead>
+        <tr>
+          <th>
+            <h2>Search phrase</h2>
+          </th>
+          <th>
+            <h2>Unique searches</h2>
+          </th>
+          <th>
+            <h2>Related Phrases</h2>
+          </th>
+        </tr>
+      </thead>
+      <tbody>{tableRows}</tbody>
+    </table>
   );
 }
 

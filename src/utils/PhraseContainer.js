@@ -1,28 +1,28 @@
 class PhraseContainer {
-    constructor() {
-        this.phrases = []
+  constructor() {
+    this.phrases = [];
+  }
+
+  add(phraseObject) {
+    this.phrases.push(phraseObject);
+  }
+
+  get totalCount() {
+    let total = 0;
+    for (const phrase of this.phrases) {
+      total += phrase.count;
     }
 
-    add(phraseObject) {
-        this.phrases.push(phraseObject)
-    }
+    return total;
+  }
 
-    get totalCount() {
-        let total = 0
-        for (const phrase of this.phrases) {
-            total += phrase.count
-        }
+  get numberOfPhrases() {
+    return this.phrases.length;
+  }
 
-        return total
-    }
-
-    get numberOfPhrases() {
-        return this.phrases.length
-    }
-
-    get isEmpty() {
-        return this.phrases.length === 0
-    }
+  get isEmpty() {
+    return this.phrases.length === 0;
+  }
 }
 
-export default PhraseContainer
+export default PhraseContainer;
