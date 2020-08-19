@@ -46,7 +46,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="header-heading">🔍 Find related phrases</h1>
+          <h1 className="header-heading">
+            <span role="img" aria-label="looking glass emoji"></span>🔍 Find
+            related phrases
+          </h1>
         </header>
         <div style={textBoxStyle}>
           <p>
